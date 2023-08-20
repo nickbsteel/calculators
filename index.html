@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>VS Calculators</title>
+</head>
+<body>
+    <div class="container">
+        <div class="links">
+            <button id="1">Cutting coils at entry</button><br>
+            <button id="2">Coil weight</button><br>
+            <button id="3">Meters per tonne</button><br>
+            <button id="">Coil Length</button><br>
+            <button id="">Skinpass load calculation</button><br>
+            <button id="">Furnace throughput rate algorithm</button><br>
+            <button id="">Coil diameter and circumference</button><br>
+            <button id="">Coating weight and disposition</button><br>
+            
+        </div>
+        <div id="calculator" class="calculator">
+            <div class="calc-head"><strong>Please note, unless stated, all measurements should be entered as MM, and weights as KG.</strong><hr></div>
+            
+            <div class="calc-body">
+                <!-- <p>Select a calculator type to get started.</p> -->
+                <h2>Cutting coils at entry</h2>
+
+                <p>Calculate the length of strip to be removed from a black coil at entry before stopping to cut out damage / pickleline welds.<br>
+                Enter in the complete diameter from bottom to top in mm (eg 1850) and do the same for the complete diameter of the PLW / damage.<br>
+                Enter the gauge as per the business system (eg 0.40) and press calculate.<br>
+                Enter the resulting meters into the allen-bradley and the warning bell should sound with 100 meters to go. (I hope ;)</p>
+                
+                <p>To get the length of a black coil, simply enter the bore size (508) as diameter 'B'</p>
+                
+                <h3><b>Choose either diameter or radius:</b></h4>
+                <div class="choose-grid">
+                    <div class="cc-choice">
+                        <img src="" alt="Diameter" id="cc-img-d">
+                        <div style="text-align: center">
+                            <input type="radio" name="dorr" id="cc-radio-d" checked>
+                            <label for="cc-radio-d">Diameter</label>
+                        </div>
+                    </div>
+                    <div class="cc-choice">
+                        <img src="" alt="Radius" id="cc-img-r">
+                        <div style="text-align: center">
+                        <input type="radio" name="dorr" id="cc-radio-r">
+                        <label for="cc-radio-d">Radius</label>
+                        </div>
+                    </div>  
+                </div>
+                <hr style="margin-top: 15px">
+                <div class="cc-inputs">
+                    <input type="number" name="cc-inpA" id="cc-inpA">
+                    <label for="cc-inpA">Measurement A</label><br>
+                    <input type="number" name="cc-inpB" id="cc-inpB">
+                    <label for="cc-inpB">Measurement B</label><br>
+                    <input type="number" name="cc-inpG" id="cc-inpG">
+                    <label for="cc-inpG">Gauge</label>
+                </div>
+                <div class="cc-line"></div>
+                <button id="cc-calculate">Calculate distance to weld</button>
+                <h2 id="cc-result">Result:</h2> 
+                <button id="cc-clear">Clear boxes</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
